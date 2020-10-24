@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+		<title>TEXEL</title>
+		<style>
+			body { margin: 0; }
+			/* canvas { display: block; } */
+		</style>
+		<link rel="stylesheet" href="./lib/boots/bootstrap.min.css">
+		<link rel="stylesheet" href="./lib/jquery/jquery-ui.css">
+		<link rel="stylesheet" href="./texel.css">
+		<script>
+			window.jQuery = window.$ = require('jquery');
+
+		</script>
+		<script src="./lib/boots/bootstrap.min.js"></script>
+		<script src="./lib/three/three.js"></script>
+		<script src="./lib/three/OrbitControls.js"></script>
+		<script src="./lib/Marvin/marvinj-1.0.js"></script>
+		<script src="./lib/jquery/jquery-ui.js"></script>
+	</head>
+	<body>
+		
+
+
+<div class="split left">
+	<div id="editing-container" class="centered">
+		
+	</div>
+  </div>
+  
+  <div class="split right">
+	<div class="centered">
+		<div id="texel-container">
+		</div>
+	</div>
+  </div>
+	
+
+
+		  <script type="module" src="./texel.js"></script>
+	</body>
+</html>
