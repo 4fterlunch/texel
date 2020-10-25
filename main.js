@@ -16,8 +16,8 @@ const menuTemplate = [{
 function createWindow() {
 
     const window = new BrowserWindow({
-        width: 800,
-        height:600,
+        width: 1500,
+        height:830,
         webPreferences: {
             nodeIntegration: true
         }
