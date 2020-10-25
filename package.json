@@ -17,8 +17,6 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
-    "marvin": "0.0.2",
-    "riot": "^5.0.0",
     "three": "^0.121.1"
   }
 }
