@@ -1,81 +1,59 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-		<title>TEXEL</title>
-		<style>
-			body { margin: 0; }
-			/* canvas { display: block; } */
-		</style>
-		<link rel="stylesheet" href="./lib/boots/bootstrap.min.css">
-		<link rel="stylesheet" href="./lib/jquery/jquery-ui.css">
-		<link rel="stylesheet" href="./texel.css">
-		<script>
-			window.jQuery = window.$ = require('jquery');
 
-		</script>
-		<script src="./lib/boots/bootstrap.min.js"></script>
-		<script src="./lib/three/three.js"></script>
-		<script src="./lib/three/OrbitControls.js"></script>
-		<script src="./lib/Marvin/marvinj-1.0.js"></script>
-		<script src="./lib/jquery/jquery-ui.js"></script>
-	</head>
-	<body>
-		
+<head>
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+	<title>TEXEL</title>
+	<style>
+		body {
+			margin: 0;
+		}
+
+		/* canvas { display: block; } */
+	</style>
+	<link rel="stylesheet" href="./lib/boots/bootstrap.min.css">
+	<link rel="stylesheet" href="./lib/jquery/jquery-ui.css">
+	<link rel="stylesheet" href="./texel.css">
+	<link rel="stylesheet" href="./lib/dat.gui/dat.gui.css">
+	<script>
+		window.jQuery = window.$ = require('jquery');
+
+	</script>
+	<script src="./lib/boots/bootstrap.min.js"></script>
+	<script src="./lib/three/three.js"></script>
+	<script src="./lib/three/OrbitControls.js"></script>
+	<script src="./lib/Marvin/marvinj-1.0.js"></script>
+	<script src="lib/dat.gui/dat.gui.js"></script>
+</head>
+
+<body>
+	<div id="edit-gui">
+
+	</div>
+	<div id="view-gui">
+
+	</div>
+	<div class="split left">
+
+		<div class="centered">
 
 
-<div class="split left">
-
-<nav class="navbar navbar-light bg-light fixed-top" style="height:50px;">
-	<ul class="nav nav-tabs ">
-		<li class="nav-item">
-		  <a  class="nav-link active" data-toggle="collapse" href="#colour-collapse">Colour</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link disabled" href="#">Alpha</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link disabled" href="#">Bump</a>
-		</li>
-		<li class="nav-item">
-		  <a class="nav-link disabled" href="#">Height</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link disabled" href="#">Roughness Map</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link disabled" href="#">Metalness Map</a>
-		  </li>
-	  </ul>
-	  <div>
-		<div class="collapse texel-collapse-toolbar" id="colour-collapse">
-			<div class="card card-body">
-				image tool adjustments to go here.
+			<div id="editing-container">
+				<canvas id="editing-canvas"></canvas>
 			</div>
-		  </div>
-	  </div>
-	</nav>
-	
-		
-	
-	<div  class="centered">
-		
-
-		<div id="editing-container">
-			
 		</div>
 	</div>
-  </div>
-  
-  <div class="split right">
-	<div class="centered">
-		<div id="texel-container">
+
+	<div class="split right">
+		<div class="centered">
+			<div id="texel-container">
+			</div>
 		</div>
 	</div>
-  </div>
-	
 
 
-		  <script type="module" src="./texel.js"></script>
-	</body>
+
+	<script type="module" src="./texel.js"></script>
+</body>
+
 </html>

@@ -6,10 +6,12 @@ app.name = "TEXEL";
 const menuTemplate = [{
     label: 'TEXEL',
     submenu: [
-        {label: 'Open'},
-        {label: 'Import'}
+        {label: 'About'},
+        {label: 'Import'},
+        {label: "S"}
     ]
-}];
+}, 
+];
 
 
 

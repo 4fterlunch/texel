@@ -43,3 +43,8 @@
       width: 49%;
       opacity: 70%;
   }
+
+  #editing-canvas { display:block; margin:1em auto; background:#bbb; border:1px solid #ccc }
+
+  #edit-gui { position: absolute; top: 2px; left: 2px; z-index: 3; }
+  #view-gui { position: absolute; top: 2px; right: 2px; z-index: 3; }
