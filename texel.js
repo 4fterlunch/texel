@@ -157,13 +157,13 @@ var texelState = (function(){
         var container = document.getElementById("texel-container");
         var plane =null;
         var control =null;
-        var ambientLight = new THREE.AmbientLight( 0x222222 ,0.7);
-        var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 )
+        var ambientLight = new THREE.AmbientLight( 0x222222 ,0);
+        var directionalLight = new THREE.SpotLight( 0xffffff, 1.2)
         var spotlight =  new THREE.SpotLight( 0xffffff, 1 );
 
         var textureLoader = new THREE.TextureLoader();
         var material = new THREE.MeshPhysicalMaterial({
-            side: THREE.DoubleSide
+            side: THREE.SingleSide
         });
         var geometry = new THREE.PlaneGeometry(2000,2000, 4 );
         plane = new THREE.Mesh( geometry, material );
@@ -189,17 +189,21 @@ var texelState = (function(){
         renderer.shadowMap.enabled = true;
         renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-        spotlight.position.set( 300, 1000, 500 );
-        spotlight.angle = 0.63;
-        spotlight.penumbra = 0.93;
-        spotlight.intensity = 1.5;
+        spotlight.position.set( 300, 1000, 1000 );
+        spotlight.angle = 1;
+        spotlight.penumbra = 1;
+        spotlight.intensity = 1.1;
         spotlight.decay = 4.8;
         spotlight.castShadow = true;
         spotlight.shadow.bias = 0.0001;
         spotlight.shadow.mapSize.width = 2048;
         spotlight.shadow.mapSize.height = 2048;
 
-        directionalLight.position.set( 300, 500, 500 );
+        directionalLight.position.set( 300, 1000, 1000   );
+        directionalLight.angle = 1.1;
+        directionalLight.penumbra = 1;
+        directionalLight.intensity = 1.2;
+        directionalLight.decay = 4.8;
         directionalLight.castShadow = true;
         directionalLight.shadow.bias = 0.0001;
         directionalLight.shadow.mapSize.width = 2048;
@@ -226,7 +230,10 @@ var texelState = (function(){
 
         GUI.viewLightingAmbient.add(ambientLight,'intensity',0,20);
 
+        GUI.viewLightingDirectional.add(directionalLight,'penumbra',0,1);
+        GUI.viewLightingDirectional.add(directionalLight,'angle',0,1.3);
         GUI.viewLightingDirectional.add(directionalLight,'intensity',0,10);
+        GUI.viewLightingDirectional.add(directionalLight,'decay',0,10);
 
         //gui
         
