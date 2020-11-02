@@ -11,19 +11,22 @@
 
 		/* canvas { display: block; } */
 	</style>
-	<link rel="stylesheet" href="./lib/boots/bootstrap.min.css">
-	<link rel="stylesheet" href="./lib/jquery/jquery-ui.css">
+	<!-- <link rel="stylesheet" href="./lib/boots/bootstrap.min.css"> -->
+	<!-- <link rel="stylesheet" href="./lib/jquery/jquery-ui.css"> -->
 	<link rel="stylesheet" href="./texel.css">
 	<link rel="stylesheet" href="./lib/dat.gui/dat.gui.css">
+	<link rel="stylesheet" href="./lib/ol/ol.css">
 	<script>
-		window.jQuery = window.$ = require('jquery');
-
+		//window.jQuery = window.$ = require('jquery');
+		const ol = require('./lib/ol/ol.js');
 	</script>
-	<script src="./lib/boots/bootstrap.min.js"></script>
+	<!-- <script src="./lib/boots/bootstrap.min.js"></script> -->
 	<script src="./lib/three/three.js"></script>
 	<script src="./lib/three/OrbitControls.js"></script>
 	<script src="./lib/Marvin/marvinj-1.0.js"></script>
-	<script src="lib/dat.gui/dat.gui.js"></script>
+	<script src="./lib/dat.gui/dat.gui.js"></script>
+	<!-- <script src="./lib/ol/ol.js"></script> -->
+	
 </head>
 
 <body>
@@ -35,13 +38,14 @@
 	</div>
 	<div class="split left">
 
-		<div class="centered">
+
 
 
 			<div id="editing-container">
-				<canvas id="editing-canvas"></canvas>
+				<div id="map" class="map"></div>
+				<!-- <canvas id="editing-canvas"></canvas> -->
 			</div>
-		</div>
+
 	</div>
 
 	<div class="split right">

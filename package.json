@@ -1,5 +1,5 @@
 {
-  "name": "Texel.js",
+  "name": "texel",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -7,18 +7,20 @@
     "lib": "lib"
   },
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^10.1.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4fterlunch/texel.git"
   },
+  "author": "Michael Holmes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4fterlunch/texel/issues"
+  },
+  "homepage": "https://github.com/4fterlunch/texel#readme",
   "dependencies": {
-    "jquery": "^3.5.1",
-    "marvin": "0.0.2",
-    "riot": "^5.0.0",
-    "three": "^0.121.1"
+    "electron": "^10.1.5"
   }
 }

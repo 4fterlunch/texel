@@ -1,3 +1,6 @@
+
+
+
 const {app, BrowserWindow, Menu} = require('electron');
 
 
@@ -6,11 +9,16 @@ app.name = "TEXEL";
 const menuTemplate = [{
     label: 'TEXEL',
     submenu: [
-        {label: 'About'},
-        {label: 'Import'},
-        {label: "S"}
+        {label: 'About'}
     ]
-}, 
+  },
+  {
+    label: 'File',
+    submenu: [
+      {label: 'New'},
+      {label: 'Import Image...'}
+    ]
+  } 
 ];
 
 
